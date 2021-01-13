@@ -1,15 +1,15 @@
 version: '3'
 
 services:
-  # backend:
-  #   build: 
-  #     context: ./project-pokemon-flux-back
-  #     dockerfile: Dockerfile
-  #   command: yarn serve
-  #   volumes:
-  #     - ./project-pokemon-flux-back:/app
-  #   ports:
-  #     - "8080:8080"
+  backend:
+    build: 
+      context: ./project-pokemon-flux-back
+      dockerfile: Dockerfile
+    command: yarn serve
+    volumes:
+      - ./project-pokemon-flux-back:/app
+    ports:
+      - "8080:8080"
   
   front:
     build: 
@@ -21,5 +21,5 @@ services:
       - /app/node_modules
     ports:
       - "4200:8080"
-    # depends_on:
-    #   - backend 
+    depends_on:
+      - backend 
