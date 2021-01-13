@@ -8,6 +8,7 @@ services:
     command: yarn serve
     volumes:
       - ./project-pokemon-flux-back:/app
+      - /app/node_modules
     ports:
       - "8080:8080"
   
